@@ -15,7 +15,7 @@
 console.log(a); // undefined
 var a = 12;
 var b = a;
-b =13;
+b = 13;
 console.log(a);
 console.log(b);
 
@@ -36,21 +36,21 @@ var a = 12;
 
 // in 操作 检测属性 是否存在 obj;
 
+console.log(a, b); // undefiend undefiend
 
-undefined, 12
-12, undefined,
-13 13
+var a = 12,
+    b = 12;
 
-12 12;
+function fn() {
+    console.log(a, b);  // undefiend 12
+    var a = b = 13;
+    console.log(a, b); // 13 13
 
+}
+fn();
+console.log(a, b); // 12 13
 
-
-
-
-
-
-
-
-
-
+// 私有作用域中带var 和不带的有区别
+// 带var 是私有作用域变量提升阶段，都声明为私有变量，和外界没有任何关系
+// 不带var 不是私有变量 就向上级作用查找 只到找到 window 为止
 
