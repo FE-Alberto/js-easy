@@ -25,16 +25,16 @@ console.log(b);
 console.log(a);
 var a = 12;
 
-// 带 var 和不带var 的区别
+// 带 var 和不带 var 的区别
 
 // 在全局作用域下声明一个变量，
-// 也相当于给window全局对象设置了一个属性。
+// 也相当于给 window 全局对象设置了一个属性。
 
 // 私有作用域中声明的私有变量和 window 没啥关系
 
 // 全局变量和 window 存在映射关系。
 
-// in 操作 检测属性 是否存在 obj;
+// in 操作 检测属性 是否真的存在;
 
 console.log(a, b); // undefiend undefiend
 
@@ -45,12 +45,11 @@ function fn() {
     console.log(a, b);  // undefiend 12
     var a = b = 13;
     console.log(a, b); // 13 13
-
 }
 fn();
 console.log(a, b); // 12 13
 
 // 私有作用域中带var 和不带的有区别
-// 带 svar 是私有作用域变量提升阶段，都声明为私有变量，和外界没有任何关系
-// 不带var 不是私有变量 就向上级作用查找 只到找到 window 为止
+// 带 var 是私有作用域变量提升阶段，都声明为私有变量，和外界没有任何关系
+// 不带 var 不是私有变量 就向上级作用查找 只到找到 window 为止
 

@@ -1,6 +1,6 @@
 // 数组的特点
 // 1. 以数组作为索引（属性名），索引从零开始递增
-// 2. 有一个length 属性存储数组的长度
+// 2. 有一个 length 属性存储数组的长度
 
 // 数组中的每一项值可以是任何类型
 // 记忆方法
@@ -42,17 +42,21 @@ console.log(del);
 
 // splice 
 // 基于splice可以 删除指定的内容 向数组指定的内容增加 还可以改指定位置的信息。
+
 // 语法：删除
 // 从索引 n 开始删除 m 个内容 
 // 把删除的内容以一个新数组返回，原有数组改变
 ary.splice(n, m)
+
 // 语法：新增
 // 把新增的数组放到 n 前面
 ary.splice(n, 0, x)
+
 // 末尾删除
 ary.pop()
 ary.splice(ary.length - 1);
 ary.length--;
+
 // 末尾增加
 ary.push;
 ary.splice(ary.length, 0, 12);
@@ -94,9 +98,12 @@ ary.sort(function (a,b) {
 // 返回：如果数组中有这一项，返回的大于等于零的索引，
 // 如果没有这一项，返回的索引为 -1；
 
-
 console.log(ary.indexOf(3) > -1);
+
+// 学习数组方法通过可以查看 数组上哪些方法
 console.dir(Array.prototype);
+
+
 // 数组中高级方法
 ary.every()
 ary.filter()

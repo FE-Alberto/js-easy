@@ -14,14 +14,14 @@ console.log(str[str.length - 1]);
 
 // charAt/charCodeAt
 // 作用：charAt根据索引获取指定位置的字符，
-// chartCode不仅获取字符，它获取的是字符对应的Unicode 编码值 ASCII 码值
+// chartCode不仅获取字符，它获取的是字符对应的 Unicode 编码值 ASCII 码值
 
 // 参数：索引
 // 返回：字符或者对应的编码
 
 // indexof /lastIndexof
 // 这俩个方法，可以获取字符串在字符串中的第一此或者最后一次出现的位置
-//  返回 结果是 -1
+// 返回 结果是 -1
 // 验证当前字符串是否包含某个字符
 
 
@@ -59,9 +59,9 @@ console.log(str[str.length - 1]);
 // 时间字符串格式化
 
 
-function addZero(val) {
-    return val < 10 ? '0' + val : val;
-}
+// function addZero(val) {
+//     return val < 10 ? '0' + val : val;
+// }
 var str = '2019-4-4 16:32:8'
 var ary = str.split(' '),
     aryLeft = ary[0].split('-'),
@@ -75,6 +75,25 @@ var month = addZero(aryLeft[1]),
 var res = month + "月" + day + "日" + hour + "时" + minute + "分";
 
 console.log(res);
+
+
+let dateFormate = function (timeStamp) {
+    let date = new Date(timeStamp)
+    let year = date.getFullYear();
+    let month = addZero(date.getMonth() + 1);
+    let day = addZero(date.getDate());
+    let hour = addZero(date.getHours());
+    let min = addZero(date.getMinutes());
+    let second = addZero(date.getSeconds());
+    return year + "-" + month + "-" + day + " " + hour + ":" + min + ":" + second;
+};
+
+function addZero(val) {
+    return val < 10 ? "0" + val : val;
+};
+
+dateFormate(new Date().getTime());
+
 
 //正则 url 参数截取
 
@@ -92,6 +111,19 @@ console.log(res);
     }
 }(String.prototype);
 
+function getRequest(url) {
+    let parms = url;
+    let obj = {}
+    if(parms.indexOf("?") !== -1){
+        let str = parms.substr(1)
+        let strs = str.split("&")
+        for (let i = 0; i < strs.length; i++) {
+           obj[strs[i].split('=')[0]] = (strs[i].split("=")[1]);
+        }
+    }
+    return obj
+}
 
-var str = 'http://www.baidu.com/?lx=1&name=123'
-console.log(str.queryUrlParameter());
+
+var str = 'www.baidu.com/?lx=1&name=123'
+console.log(getRequest(str));
