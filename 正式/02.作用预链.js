@@ -8,7 +8,7 @@ function fn() {
 
 fn();
 console.log(b);
-// 只对 等号左边进行变量提升 var fn =
+// 只对 等号左边进行变量提升 var fn;
 var fn = function () {
     console.log('123');
 };
