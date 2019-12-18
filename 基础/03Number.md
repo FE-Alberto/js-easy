@@ -24,9 +24,9 @@ isNaN: 检测当前值是否不是有效数字，返回true 代表不是有效�
 重要：isNaN检测的机制
 
 - parseInt
-
-
-
+    parseInt方法用于将字符串转为整数。
+    如果字符串头部有空格，空格会被自动去除。
+    如果parseInt的参数不是字符串，则会先转为字符串再转换。
 - parseFloat
 
 
