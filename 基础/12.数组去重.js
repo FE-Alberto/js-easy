@@ -68,3 +68,5 @@ for (let i = 0; i < arry.length; i++) {
 console.log(obj);
 
 console.log(Array.from(new Set(arry)));
+
+// https://zh.javascript.info/

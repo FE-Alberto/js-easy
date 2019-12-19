@@ -89,9 +89,9 @@ ary[ary.length] = 2;
 // 返回：原有数组改变
 // 问题：sort在不传递参数的情况的下 只能处理10以内的数字排序
 
-var ary = [1,3,4,5,3,123,3];
-ary.sort(function (a,b) {
-    return a-b; // a-b 升序 b-a 降序
+var ary = [1, 3, 4, 5, 3, 123, 3];
+ary.sort(function (a, b) {
+    return a - b; // a-b 升序 b-a 降序
 });
 // indexOf / lastIndexOf
 // 这俩种不兼容 ie6-8
@@ -115,6 +115,4 @@ ary.keys()
 ary.map()
 ary.reduce()
 ary.reduceRight()
-ary.some()
- 
-
+ary.some();
