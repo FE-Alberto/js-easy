@@ -67,23 +67,69 @@ console.log(num);
 
 
 
-for (let index = array.length-1; index >= 0; index--) {
+for (let index = array.length - 1; index >= 0; index--) {
     console.log(array.length);
-    
+
     const e = array[index];
     console.log(e);
 }
 
-let array = [12,3,3,22,31];
+let array = [12, 3, 3, 22, 31];
 for (let index = 0; index < array.length; index++) {
-    
-    if(index%2 == 0){
+
+    if (index % 2 == 0) {
         console.log(array[index]);
     }
 }
 
-for (let index = 0; index < array.length; index+= 2) {
+for (let index = 0; index < array.length; index += 2) {
     const element = array[index];
     console.log(element);
-    
+}
+
+//  while 和 for
+let i = 0;
+while (i < 3) { // condition 条件为 true 时候才执行循环
+    console.log(i);
+    i++
+}
+
+for (let i = 1; i < 10; i++) {
+    console.log(++i);
+    if (i % 2 === 0) {
+        console.log(i);
+    }
+}
+
+let i = 0;
+while (i < 3) {
+    i++
+    console.log(`number${i}`);
+}
+
+// 素数
+
+let n = 10;
+for (let i = 2; i <= n; i++) {
+    for (var j = 2; j < Math.sqrt(i); j++) {
+        if (i % j == 0) {
+            break;
+        }
+      
+    }
+    if (j > Math.sqrt(i)) {
+        console.log(i);
+    }
+}
+
+// switch 语句  可以替代多个 if 判断
+// switch 语句为多分支选择情况 提供一个根据描述性的方式。
+
+switch (x) {
+    case "value1":
+        
+        break;
+
+    default:
+        break;
 }

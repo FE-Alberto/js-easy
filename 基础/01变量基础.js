@@ -38,7 +38,13 @@ console.log(obj.m)
 var ary1 = [3, 4];
 var ary2 = ary1; // [3,4]
 ary2[0] = 1; // [1,4] [1,0]
-ary2 = [4, 5];//[4,5]
+ary2 = [4, 5]; //[4,5]
 ary2[1] = 2; // [4,2]
 ary1[1] = 0; // [1,0]
-console.log(ary1,ary2);
+console.log(ary1, ary2);
+
+let admin;
+let name = "john";
+admin = name;
+console.log(admin);
+
