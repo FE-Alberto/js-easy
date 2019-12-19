@@ -11,7 +11,7 @@ var oTab = document.getElementById('tab'),
 
 // function change(index) {
 //     console.log(index);
-    
+
 //     for (let i = 0; i < tabList.length; i++) {
 //         tabList[i].className = divList[i].className = '';
 //     }
@@ -32,15 +32,15 @@ for (let i = 0; i < tabList.length; i++) {
      * ]
      */
     tabList[i].onclick = function () {
-        change2(this);//=>需要传递当前点击LI的索引,但是还不能使用I了 (this:当前点击的LI  this.myIndex： 从当前点击LI的自定义属性上获取到事先存储的索引)
+        change2(this); //=>需要传递当前点击LI的索引,但是还不能使用I了 (this:当前点击的LI  this.myIndex： 从当前点击LI的自定义属性上获取到事先存储的索引)
     }
 }
 
 function change2(ele) {
     console.log(ele);
-    
+
     for (let index = 0; index < tabList.length; index++) {
-        if(tabList[index] === ele){
+        if (tabList[index] === ele) {
             tabList[index].className = divList[index].className = 'active';
             continue;
         }
@@ -48,7 +48,7 @@ function change2(ele) {
         divList[index].className = ''
     }
 
-    
+
 }
 
 
@@ -136,4 +136,3 @@ i++ i=3 循环结束*/
         }
     })(i);
 }*/
-

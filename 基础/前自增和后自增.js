@@ -1,6 +1,4 @@
 
-
-
 var a = 1;
 var b = ++a + ++a; a = a +1 ;  // 2
 console.log(a); 
@@ -10,17 +8,6 @@ var a = 1;
 var b = ++a + a++;
 console.log(a); 3
 console.log(b); 4
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -78,3 +65,13 @@ Number();
 String();
 Boolean();
 
+
+// 自增/自减
+// 后自增 自减  是将变量与 值 加 1 和 -1
+// 自增/自减只能应用于变量
+let num = 2;
+let n = num++
+let s = ++num;
+console.log(num);4
+console.log(n);2
+console.log(s);4

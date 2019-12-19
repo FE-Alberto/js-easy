@@ -1,5 +1,3 @@
-
-
 // 第一种 双for循环 依次拿出数组的中的每一项；排除最后一项没有需要比较的内容。
 // 和当前拿出项后面的每一项依次比较
 // 如果发现重复的 我们把找到的这个重复向在原有的数组中删除
@@ -30,7 +28,7 @@ for (let k = 0; k < ary.length; k++) {
         // k--;
         // 把数组的最后一项结果获取到，然后替换当前项
         // 再把数组最后一项删除
-        ary[k] = ary[ary.length-1];
+        ary[k] = ary[ary.length - 1];
         ary.length--;
         k--;
         continue;
@@ -44,3 +42,31 @@ new Set(ary);
 Array.from(new Set(ary));
 console.log(ary);
 
+
+
+
+
+
+
+
+
+
+
+
+let arry = [1, 3, 2, 5, 6, 2, 3, 34, 5, 1, 3, 23]
+let obj = {}
+for (let i = 0; i < arry.length; i++) {
+    let item = arry[i];
+    if (typeof obj[item] !== 'undefined') {
+        arry[item] = arry[arry.length - 1]
+        arry.length--;
+        i--;
+        continue;
+    }
+    obj[item] = item;
+}
+console.log(obj);
+
+console.log(Array.from(new Set(arry)));
+
+// https://zh.javascript.info/
