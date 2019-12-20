@@ -36,23 +36,6 @@ function sum() {
 }
 console.log(sum(10, "123", "AA", 32, 2, 3, 1));
 
-
-
-
-
-
-function sum2() {
-    let total = null;
-    console.log(arguments);
-    for (let i = 0; i < arguments.length; i++) {
-        let item = arguments[i];
-        item = Number(item);
-        isNaN(item) ? null : total += item;
-    }
-    return total;
-}
-console.log(sum2(10, "123", "AA", 32, 2, 3, 1));
-
 // es6 求和
 
 let sum = (...arg) => {

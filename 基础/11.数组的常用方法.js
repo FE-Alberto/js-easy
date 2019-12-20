@@ -116,3 +116,22 @@ ary.map()
 ary.reduce()
 ary.reduceRight()
 ary.some();
+
+
+
+
+
+
+let num = [13, 2, 5, 6, 21, 3, 21, 6, 4, 3, 2, 2, 21, 1]
+let obj = {}
+for (let i = 0; i < num.length; i++) {
+    let item = num[i];
+    if (typeof obj[item] !== 'undefined') {
+        num[i] = num[num.length - 1];
+        num.length--;
+        i--;
+        continue;
+    }
+    obj[item] = item;
+}
+console.log(obj);

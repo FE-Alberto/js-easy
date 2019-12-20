@@ -114,11 +114,11 @@ dateFormate(new Date().getTime());
 function getRequest(url) {
     let parms = url;
     let obj = {}
-    if(parms.indexOf("?") !== -1){
+    if (parms.indexOf("?") !== -1) {
         let str = parms.substr(1)
         let strs = str.split("&")
         for (let i = 0; i < strs.length; i++) {
-           obj[strs[i].split('=')[0]] = (strs[i].split("=")[1]);
+            obj[strs[i].split('=')[0]] = (strs[i].split("=")[1]);
         }
     }
     return obj
@@ -127,3 +127,14 @@ function getRequest(url) {
 
 var str = 'www.baidu.com/?lx=1&name=123'
 console.log(getRequest(str));
+
+function suijishu() {
+    let codeZone = 'qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM1234567890'
+    let str = ''
+    for (let i = 0; i < 4; i++) {
+        let n = Math.round(Math.random() * codeZone.length)
+        str += codeZone.charAt(n);
+    }
+    return str;
+}
+console.log(suijishu());

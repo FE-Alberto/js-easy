@@ -4,7 +4,7 @@ var b = ++a + ++a; a = a +1 ;  // 2
 console.log(a); 
 console.log(b);
 
-var a = 1;
+var a = 1; 
 var b = ++a + a++;
 console.log(a); 3
 console.log(b); 4
