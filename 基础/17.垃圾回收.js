@@ -39,11 +39,85 @@ for (let key in user) {
 // Object -  oriented programming OOP
 
 let user = {
-    name:"join",
-    age:30,
-    sayHi () {
-        console.log(this.name);
+    name: "join",
+    age: 30,
+    sayHi() {
+        console.log(user.name);
     }
 }
-console.log(user.sayHi());
 
+let user2 = {
+    name: "joh2n",
+    hi() {
+        console.log(this.name);
+    },
+    bye() {
+        console.log('bye');
+
+    }
+}
+user2.name === 'join' ? user2.hi() : user2.bye()
+
+let calculator = {
+    read() {
+        this.a = +prompt('a?', 0)
+        this.b = +prompt('b?', 0)
+    },
+    sum() {
+        return this.a + this.b;
+    },
+    mul() {
+        return this.a * this.b;
+    }
+};
+
+calculator.read();
+alert(calculator.sum());
+alert(calculator.mul());
+
+
+function User(name) {
+    // this = {}
+    this.name = name;
+    this.isAdmin = false;
+}
+
+let user = new User('jack')
+console.log(user.name);
+console.log(user.isAdmin);
+
+function Calculator() {
+
+    let methods = {
+        "-": (a, b) => a - b,
+        "+": (a, b) => a + b
+    };
+    console.log(methods);
+    
+    this.calculate = function (str) {
+        console.log(str);
+        
+        let split = str.split(' '),
+            a = +split[0],
+            op = split[1],
+            b = +split[2]
+            
+        if (!methods[op] || isNaN(a) || isNaN(b)) {
+            return NaN;
+        }
+
+        return methods[op](a, b);
+    }
+
+    this.addMethod = function (name, func) {
+        methods[name] = func;
+    };
+}
+
+let powerCalc = new Calculator;
+powerCalc.addMethod("*", (a, b) => a * b);
+powerCalc.addMethod("/", (a, b) => a / b);
+powerCalc.addMethod("**", (a, b) => a ** b);
+
+let result = powerCalc.calculate("2 / 3");
+console.log(result);

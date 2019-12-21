@@ -14,7 +14,7 @@ console.log(str[str.length - 1]);
 
 // charAt/charCodeAt
 // 作用：charAt根据索引获取指定位置的字符，
-// chartCode不仅获取字符，它获取的是字符对应的 Unicode 编码值 ASCII 码值
+// charCodeAt不仅获取字符，它获取的是字符对应的 Unicode 编码值 ASCII 码值
 
 // 参数：索引
 // 返回：字符或者对应的编码
@@ -138,3 +138,15 @@ function suijishu() {
     return str;
 }
 console.log(suijishu());
+
+function random(min,max) {
+    return min + Math.random() * (max-min);
+}
+console.log(random(1,5));
+console.log(random(1,5));
+console.log(random(1,5));
+
+function ucFirst(val){
+   return val[0].toUpperCase() + val.substr(1);
+}
+console.log(ucFirst('aqeqwe'));
