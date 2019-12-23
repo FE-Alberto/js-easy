@@ -66,7 +66,7 @@ Object.assign();
 let user = {name:"john"};
 let permiss1 = { canView:true}
 let permiss2 = { canEidt:true}
-console.log(Object.assign(user,permiss1, permiss2));
+console.log(Object.assign({},user,permiss1, permiss2));
 
 // 复制
 

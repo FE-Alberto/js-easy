@@ -100,6 +100,20 @@ ary.sort(function (a, b) {
 
 console.log(ary.indexOf(3) > -1);
 
+
+let fruits = ["Apples", "Pear", "Orange"];
+
+let shoppingCart = fruits;
+
+shoppingCart.push("Banana");
+
+console.log(fruits.length);
+
+let styles = ['jazz','blues'];
+
+styles.push('rock-n-roll')
+styles.length % 1 
+
 // 学习数组方法通过可以查看 数组上哪些方法
 console.dir(Array.prototype);
 
@@ -118,17 +132,51 @@ ary.reduceRight()
 ary.some();
 
 
-
-let num = [3,3,4,5,3,1,2,3,3,4,5,5,7,5,32,1]
+let str = [1,123,5,5,23,4,2,13,1]
 let obj = {}
-for (let i = 0; i < num.length; i++) {
-    let item = num[i];
+for (let i = 0; i < str.length; i++) {
+    let item = str[i];
     if(typeof obj[item] !== 'undefined'){
-        num[i] =num[num.length-1]
-        num.length--;
+        item = str[str.length-1];
+        str.length--;
         i--;
         continue;
     }
     obj[item] = item;
 }
 console.log(obj);
+
+// find 和 findIndex
+
+let users = [
+    {id:1,name:"john"},
+    {id:2,name:"john2"},
+    {id:3,name:"john3"}
+]
+
+// let user = users.find(item => item.id == 1)
+// console.log(user);
+
+// filter
+let results = users.filter((item,index,array) =>{
+    console.log(array.length);
+})
+
+// sort
+arr.sort ((a,b)=>a-b)
+
+
+let user = {
+    age:18,
+    younger(otherUser){
+        return otherUser.age < this.age;
+    }
+}
+let users =[
+    {age:12},
+    {age:3},
+    {age:1}
+]
+let youngerUsers= users.filter(user.younger, users)
+console.log(youngerUsers.length);
+

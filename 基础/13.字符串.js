@@ -43,8 +43,8 @@ console.log(str[str.length - 1]);
 // toUpperCase();
 
 // split 
-// 和数组中的join相对应
-// 数组中的join是把数组的每一项按着指定的连接符为字符串
+// 和数组中的 join 相对应
+// 数组中的 join 是把数组的每一项按着指定的连接符为字符串
 
 // split是吧字符串按照指定的分隔符，拆分成数组中的每一项
 
@@ -54,7 +54,19 @@ console.log(str[str.length - 1]);
 // 参数：原有字符 要替换的新字符
 // 替换后的字符串
 
+// includes, startsWith, endsWith
 
+// includes 是否字符串匹配 返回 true / false
+let str = 'ewqsda'
+console.log(str.includes('ew'));
+
+// startsWith 字符串开头是否匹配
+let str = 'ewqsda'
+console.log(str.startsWith('ew'));
+// endsWith
+
+let str = 'ewqsda'
+console.log(str.endsWith('ew'));
 
 // 时间字符串格式化
 
