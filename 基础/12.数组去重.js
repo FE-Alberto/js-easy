@@ -69,4 +69,3 @@ console.log(obj);
 
 console.log(Array.from(new Set(arry)));
 
-// https://zh.javascript.info/
