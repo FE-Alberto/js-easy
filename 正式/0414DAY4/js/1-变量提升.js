@@ -82,14 +82,14 @@ console.log(a, b, c);//=>undefined/10/21*/
 //=>案例三：
 var ary = [12, 23];
 function fn(ary) {
-    console.log(ary);
-    ary[0]=34;
-    ary=[34];
-    ary[0]=45;
-    console.log(ary);
+    console.log(ary); // 12, 23
+    ary=[34]; 
+    ary[0]=34;  // 34 23
+    ary[0]=45; // 45
+    console.log(ary);// 45
 }
 fn(ary);
-console.log(ary);
+console.log(ary); // 34 23
 
 
 

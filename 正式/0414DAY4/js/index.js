@@ -2,6 +2,13 @@ var oTab = document.getElementById('tab'),
     tabList = oTab.getElementsByTagName('li'),
     divList = oTab.getElementsByTagName('div');
 
+//=>解决方案：基于ES6解决
+for (let i = 0; i < tabList.length; i++) {
+    tabList[i].onclick = function () {
+        changeTab(i);
+    }
+}
+
 function changeTab(curIndex) {
     for (var i = 0; i < tabList.length; i++) {
         tabList[i].className = divList[i].className = '';
@@ -10,6 +17,8 @@ function changeTab(curIndex) {
     tabList[curIndex].className = 'active';
     divList[curIndex].className = 'active';
 }
+
+
 
 /*
 for (var i = 0; i < tabList.length; i++) {
@@ -73,13 +82,6 @@ for (var i = 0; i < tabList.length; i++) {
         }
     })(i);
 }*/
-
-//=>解决方案：基于ES6解决
-for (let i = 0; i < tabList.length; i++) {
-    tabList[i].onclick = function () {
-        changeTab(i);
-    }
-}
 
 //=>基于ES6中的LET来创建变量,是存在块级作用域的(类似于私有作用域)
 //作用域：（栈内存）
