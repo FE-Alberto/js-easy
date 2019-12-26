@@ -57,7 +57,7 @@ g = function () {return false;};//=>window.g=...（FALSE）
 ~function () {
     /*
      * 变量提升：
-     *   function g;  //=>g是私有变量
+     * function g;  //=>g是私有变量
      */
     if (g() && [] == ![]) {//=>Uncaught TypeError: g is not a function （此时的g是undefined）
         //=>[]==![]：TRUE

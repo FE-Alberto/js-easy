@@ -9,7 +9,7 @@ function fn(a) {
     // 函数中第一件事 是 形参赋值 其次是变量提升
     // 形参赋值 a = 12;
     // 变量提升 var b
-    // 在私有作用域中，声明过的变量或者function 和形参是私有变量
+    // 在私有作用域中，声明过的变量或者 function 和形参是私有变量
     // 剩下的都不是自己的通过作用域链向上查找
 
     console.log(a, b, c); // 12 undefined 14
@@ -25,7 +25,7 @@ var ary = [12, 23];
 function fn(ary) {
     console.log(ary); // 12 23
     ary[0] = 100; // 100 23
-    var ary = [100]; // 100
+    ary = [100]; // 100
     ary[0] = 0; // 0
     console.log(ary); // 0
 }

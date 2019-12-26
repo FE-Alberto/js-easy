@@ -39,7 +39,7 @@ var a = 12;
 console.log(a, b); // undefiend undefiend
 
 var a = 12,
-    b = 12;
+    b = 12; // 13
 
 function fn() {
     console.log(a, b);  // undefiend 12

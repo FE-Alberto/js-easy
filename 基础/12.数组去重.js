@@ -43,29 +43,20 @@ Array.from(new Set(ary));
 console.log(ary);
 
 
+var ary = [1, 3, 4, 5, 53, 23, 1, 2, 13, 2];
+var quchong = Array.from(new Set(ary))
+console.log(quchong);
 
-
-
-
-
-
-
-
-
-
-let arry = [1, 3, 2, 5, 6, 2, 3, 34, 5, 1, 3, 23]
-let obj = {}
-for (let i = 0; i < arry.length; i++) {
-    let item = arry[i];
+var obj = {}
+for (let i = 0; i < ary.length; i++) {
+    const item = ary[i];
     if (typeof obj[item] !== 'undefined') {
-        arry[item] = arry[arry.length - 1]
-        arry.length--;
+        ary[i] = ary[ary.length - 1];
+        ary.length--;
         i--;
-        continue;
+        continue
     }
     obj[item] = item;
 }
 console.log(obj);
-
-console.log(Array.from(new Set(arry)));
 

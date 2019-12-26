@@ -7,12 +7,12 @@ console.log(a);
 
 let a = 10,
     b = 12;
-let fn = function(){
+let fn = function () {
     let a = b = 20
-    console.log(a,b);
+    console.log(a, b);
 };
 fn();
-console.log(a,b);
+console.log(a, b);
 
 // 在相同的作用域中，基于let不能声明相同名字的变量
 // let 没有变量提升，不能重复声明；有重复就报错
@@ -22,8 +22,8 @@ console.log(a,b);
 // 浏览器会做一个重复性检查，自上而下查找到当前作用域所有比那里，一旦发现有重复的就爆出异常。
 
 // 暂时性死区 es6解决了暂时性死区的问题。
-var a =12;
-if(true){
+var a = 12;
+if (true) {
     console.log(a);
     let a = 21;
 }

@@ -10,10 +10,9 @@
 var i = 1;
 
 function fn(i) {
-
-    var i = 2; // 私有变量
+    var i = 2; // 私有变量 
     return function (n) {
-        console.log(n + (++i)); //
+        console.log(n + (++i));
     }
 }
 var f = fn(2); // 先把fn执行传递实参2，把fn执行的返回结果赋值给 小f；

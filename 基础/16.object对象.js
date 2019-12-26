@@ -24,7 +24,7 @@ delete user['likes birds']
 // 计算属性 
 let fruit = 'apple'
 let bag = {
-    [fruit + 'Computer']:5
+    [fruit + 'Computer']: 5
 }
 console.log(bag);
 
@@ -32,13 +32,13 @@ console.log(bag);
 // 属性值的简写 : 属性名跟变量名一样。这种应用场景很常见，所以提供一种很便利的方式来定义对象的属性值。
 
 // 也可以简写和 正常方式混淆
-function makeUser(name,age) {
+function makeUser(name, age) {
     return {
         name,
-        age:21,
+        age: 21,
     }
 }
-let user = makeUser("john",31);
+let user = makeUser("john", 31);
 console.log(user.name);
 console.log(user.age);
 // 存在值的检测
@@ -48,7 +48,7 @@ console.log(user.noSuchProperty === undefined);
 
 
 let obj = {
-    user:undefined
+    user: undefined
 }
 console.log(obj.user);
 console.log('user' in obj);
@@ -63,18 +63,18 @@ console.log(a === b);
 // 对象 复制和合并
 Object.assign();
 // 合并
-let user = {name:"john"};
-let permiss1 = { canView:true}
-let permiss2 = { canEidt:true}
-console.log(Object.assign({},user,permiss1, permiss2));
+let user = { name: "john" };
+let permiss1 = { canView: true }
+let permiss2 = { canEidt: true }
+console.log(Object.assign({}, user, permiss1, permiss2));
 
 // 复制
 
-console.log(Object.assign({},user));
+console.log(Object.assign({}, user));
 
 let user = {
     name: "john",
-    surname:"Smith"
+    surname: "Smith"
 }
 user.name = 'Pete'
 console.log(user);
@@ -88,20 +88,20 @@ function isEmpty(obj) {
     return true
 }
 let s = {
-    name : "1",
+    name: "1",
 }
 console.log(isEmpty(s));
 let salaries = {
     John: 100,
     Ann: 160,
     Pete: 130
-  }
+}
 
 function sum(salaries) {
     let sum = 0;
     for (const key in salaries) {
-        if(key in salaries){
-            sum += salaries[key]  
+        if (key in salaries) {
+            sum += salaries[key]
         }
     }
     return sum;
@@ -113,11 +113,11 @@ let menu = {
     width: 200,
     height: 300,
     title: "My menu"
-  };
+};
 function multiplyNumeric(menu) {
     for (const key in menu) {
-        if(typeof menu[key] == "number"){
-           menu[key] *= 2;
+        if (typeof menu[key] == "number") {
+            menu[key] *= 2;
         }
     }
     return menu;
