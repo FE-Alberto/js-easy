@@ -6,7 +6,7 @@ function fn() {
     console.log(a);
     // 当前函数本身 fn
     console.log(arguments.callee);
-    // 当前函数在什么地方执行
+    // 当前函数在什么地方执行 全局下是 null
     console.log(arguments.callee.caller);
 }
 
@@ -17,43 +17,20 @@ function sum() {
 sum();
 
 
-
-
-
 // 
 
 
 var n = 10;
-
 function fn() {
     var n = 20;
-
     function f() {
         n++;
-        console.log(n);
+        console.log(n); // 21 
     }
     f();
     return f;
-
 }
 var x = fn();
-x()
-x()
-console.log(n);
-
-
-
-var i = 1;
-
-function fn(i) {
-    return function (n) {
-        console.log(n + (++i));
-    }
-}
-
-var f = fn(2);
-f(3) // 6
-fn(5)(6); // 12
-fn(7)(8) // 16
-f(4) // 8
-
+x() // 22
+x() // 23
+console.log(n); // 10
