@@ -38,10 +38,10 @@ var a = 10,
 
 function fn(a) {
     // /!*
-    //  * 形参赋值：a=10
+    //  * 形参赋值：a = 10;
     //  * 变量提升：var b;
     //  *!/
-    //console.log(a, b, c);//=>Uncaught ReferenceError: c is not defined
+    // console.log(a, b, c);//=>Uncaught ReferenceError: c is not defined
     a *= 2; //=>a=20
     var b = a; //=>b=20
     b++; //=>b=21

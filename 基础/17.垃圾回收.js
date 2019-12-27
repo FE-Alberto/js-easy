@@ -29,7 +29,7 @@ let id = Symbol("id");
 let user = {
     name: "John",
     age: 30,
-    id: 123
+    [id]: 123
 };
 // symbol 属性不参与 for in 循环；
 for (let key in user) {

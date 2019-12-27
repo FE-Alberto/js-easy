@@ -104,6 +104,8 @@ console.log(print());
 
 
 var add = function (x, y) {
+    console.log(x,y);
+    console.log(this.m, this.n);
     return x * this.m + y * this.n;
 }
 
@@ -112,9 +114,8 @@ var obj = {
     n: 2
 };
 
-var newAdd = add.bind(obj, 5);
-newAdd(5)
-console.log(newAdd(5));
+var newAdd = add.bind(obj,5,6);
+console.log(newAdd());
 
 // bind方法注意点；每一次返回新函数，
 // 结合call方法使用

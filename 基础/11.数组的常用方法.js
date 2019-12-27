@@ -113,6 +113,8 @@ let styles = ['jazz','blues'];
 
 styles.push('rock-n-roll')
 styles.length % 1 
+console.log(styles);
+
 
 // 学习数组方法通过可以查看 数组上哪些方法
 console.dir(Array.prototype);

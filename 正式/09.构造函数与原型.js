@@ -50,7 +50,7 @@ console.log(v.price);
 // 开始执行构造函数内部的代码。
 
 // 如果构造函数内部有return语句，而且return后面跟着一个对象，
-// new命令会返回 return语句指定的对象，否则，就不会管 return 语句 都返回 this 对象
+// new命令会返回 return 语句指定的对象，否则，就不会管 return 语句 都返回 this 对象
 
 var Vehicle = function () {
     this.price = 1000;

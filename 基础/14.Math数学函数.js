@@ -19,11 +19,11 @@ console.log(Math.round(4.23));
 console.log(Math.sqrt(16));
 
 // pow 取幂
-console.log(Math.pow(1,2));
+console.log(Math.pow(1, 2));
 
 
 // max 和 min 获取最大值和最小值
-let ary = [12,3,23,4,123,12345]
+let ary = [12, 3, 23, 4, 123, 12345]
 console.log(Math.max(...ary));
 console.log(Math.min(...ary));
 
@@ -32,7 +32,7 @@ console.log(Math.PI);
 
 // random  获取0-1的随机小数
 for (let i = 0; i < 10; i++) {
-    console.log(Math.round(Math.random()*(0-10)+10));
+    console.log(Math.round(Math.random() * 10));
 }
 
 
