@@ -60,3 +60,51 @@ for (let i = 0; i < ary.length; i++) {
 }
 console.log(obj);
 
+function unique(ary) {
+    var obj = {};
+    for (let i = 0; i < ary.length; i++) {
+        var item = ary[i];
+        if (obj.hasOwnProperty(item)) {
+            item = ary[ary.length - 1];
+            ary.length--;
+            i--;
+            continue;
+        }
+        obj[item] = item;
+    }
+    obj = null;
+    return ary;
+}
+var ary = [12, 3, 23, 14, 1, 123, 1, 1, 1, 1];
+// 为什么ary.sort可以执行，因为sort是array.prototype上的内置属性方法。
+ary.sort(function (a, b) {
+    return a - b;
+})
+console.log(ary);
+
+// 基于内置类原型扩展方法。供它的实例调取使用。
+// 我们增加的方法最好设置前缀区分 防止把内置方法重写。
+// js 中的链式写法：保证每一个方法执行返回的结果任然是当前类的实例，这样就可以继续调取方法使用了,
+var ary = [12, 3, 23, 14, 1, 123, 1, 1, 1, 1];
+Array.prototype.myUnique = function myUnique() {
+    // 方法中的 this 一般都是实例
+    var obj = {};
+    for (let i = 0; i < this.length; i++) {
+        var item = this[i];
+        if (obj.hasOwnProperty(item)) {
+            item = this[this.length - 1];
+            this.length--;
+            i--;
+            continue;
+        }
+        obj[item] = item;
+    }
+    obj = null;
+    return this;
+}
+ary.myUnique()// this.ary;
+console.log(ary); 
+
+var n = 5;
+var res = n.plus(3).minus(2); // 6
+console.log(res);
