@@ -28,7 +28,7 @@ var a = {
     p: 'Hello',
     b: {
         m: function () {
-            console.log(this.p);
+            console.log(_this.p);
         }
     }
 };
@@ -87,7 +87,7 @@ function f(x, y) {
 f.call(null, 1, 1);
 f.apply(null, [2, 3]);
 
-// 获取数组最大值的2种方法
+// `获取数组最大值的2种方法`
 var a = [10, 2, 4, 15, 9];
 console.log(Math.max(...a));
 console.log(Math.max.apply(null, a));

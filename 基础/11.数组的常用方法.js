@@ -109,10 +109,10 @@ shoppingCart.push("Banana");
 
 console.log(fruits.length);
 
-let styles = ['jazz','blues'];
+let styles = ['jazz', 'blues'];
 
 styles.push('rock-n-roll')
-styles.length % 1 
+styles.length % 1
 console.log(styles);
 
 
@@ -134,12 +134,12 @@ ary.reduceRight()
 ary.some();
 
 
-let str = [1,123,5,5,23,4,2,13,1]
+let str = [1, 123, 5, 5, 23, 4, 2, 13, 1]
 let obj = {}
 for (let i = 0; i < str.length; i++) {
     let item = str[i];
-    if(typeof obj[item] !== 'undefined'){
-        item = str[str.length-1];
+    if (typeof obj[item] !== 'undefined') {
+        item = str[str.length - 1];
         str.length--;
         i--;
         continue;
@@ -151,34 +151,47 @@ console.log(obj);
 // find 和 findIndex
 
 let users = [
-    {id:1,name:"john"},
-    {id:2,name:"john2"},
-    {id:3,name:"john3"}
+    { id: 1, name: "john" },
+    { id: 2, name: "john2" },
+    { id: 3, name: "john3" }
 ]
 
 // let user = users.find(item => item.id == 1)
 // console.log(user);
 
 // filter
-let results = users.filter((item,index,array) =>{
+let results = users.filter((item, index, array) => {
     console.log(array.length);
 })
 
 // sort
-arr.sort ((a,b)=>a-b)
+arr.sort((a, b) => a - b)
 
 
 let user = {
-    age:18,
-    younger(otherUser){
+    age: 18,
+    younger(otherUser) {
         return otherUser.age < this.age;
     }
 }
-let users =[
-    {age:12},
-    {age:3},
-    {age:1}
+let users = [
+    { age: 12 },
+    { age: 3 },
+    { age: 1 }
 ]
-let youngerUsers= users.filter(user.younger, users)
+let youngerUsers = users.filter(user.younger, users)
 console.log(youngerUsers.length);
 
+var ary = [13, 24, 213, 523, 123, 123, 3, 1, 121, 1, 1]
+var obj = {}
+for (let i = 0; i < ary.length; i++) {
+    var item = ary[i];
+    if (typeof obj[item] !== 'undefined') {
+        item = ary[ary.length - 1];
+        ary.length--;
+        i--;
+        continue;
+    }
+    obj[item] = item;
+}
+console.log(obj);

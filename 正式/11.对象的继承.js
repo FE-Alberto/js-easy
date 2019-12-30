@@ -74,7 +74,7 @@ console.log(mine, mine.length);
 
 // 由于 constructor 属性定义在 prototype 对象上面，意味着可以被所有实例对象继承。
 
-function P() {};
+function P() { };
 var p = new p();
 // p 是构造函数的大P的实例对象，但是p 自身没有 constructor 属性，该属性其实是读取原型链上面大 P.prototype.constructor 属性。
 
@@ -87,7 +87,7 @@ p.hasOwnProperty('constructor')
 function Fn() {
     this.name = 'hello'
 }
-Fn.prototype.createCopy = function() {
+Fn.prototype.createCopy = function () {
     return new this.constructor();
 }
 
@@ -101,7 +101,7 @@ var x = new f.constructor();
 console.log(x instanceof Fn);
 console.log(x.name);
 var z = x.createCopy()
-console.log(z.name);
+console.log(z.prototype);
 
 // constructor 属性表示原型对象余构造函数之间的关联关系，
 // 如果修改了原型对象，一般会同时修改 constructor 属性
@@ -111,7 +111,7 @@ function Person(name) {
     this.name = name;
 }
 Person.prototype.method = function () {
-    
+
 }
 console.log(Person.prototype.constructor === Person);
 console.log(Person.prototype.constructor === Object);
@@ -140,7 +140,7 @@ console.log(NewCat.prototype.isPrototypeOf(cat));
 // instanceof 检查整改原型链，因此同一个实例对象，可能会对多个构造函数都返回 true
 
 // instanceof 还可以判断值的类型 只限于 实例对象
-var x = [1,2,3];
+var x = [1, 2, 3];
 var y = {};
 console.log(x instanceof Array);
 console.log(y instanceof Object);
@@ -150,7 +150,7 @@ function Shape() {
     this.y = 0;
 }
 
-Shape.prototype.move = function(x,y) {
+Shape.prototype.move = function (x, y) {
     this.x += x;
     this.y += y;
     console.info("Shape moved.");
@@ -192,25 +192,25 @@ var s = new S();
 console.log(s.hello);
 console.log(s.world);
 
-(function($,window,document){
+(function ($, window, document) {
     function go() {
-        
+
     }
 
     function handleEvents() {
-        
+
     }
 
     function initalize() {
-        
+
     }
 
     function dieCarouseDie() {
-        
+
     }
-    
+
     window.finalCarousel = {
-        init:initalize,
+        init: initalize,
         destory: dieCarouseDie
     }
 })(JQuery, window, document)

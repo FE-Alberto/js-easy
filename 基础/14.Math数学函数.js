@@ -30,7 +30,7 @@ console.log(Math.min(...ary));
 // PI 获取圆周率
 console.log(Math.PI);
 
-// random  获取0-1的随机小数
+// random  获取0-10的随机数
 for (let i = 0; i < 10; i++) {
     console.log(Math.round(Math.random() * 10));
 }

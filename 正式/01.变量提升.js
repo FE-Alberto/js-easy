@@ -4,7 +4,7 @@
 // 这种预先处理机制成为变量提升。
 // 变量提升（declare）：var a / function sum （默认值是undefined）
 // 声明：declare var a; (默认值是undefined)
-// 定义 defined  a = 12; （定义其实就是赋值操作）
+// 定义：defined a = 12; （定义其实就是赋值操作）
 
 // 带 var 的只声明未定义
 // 带 function 的声明和赋值都完成了
