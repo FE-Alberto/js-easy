@@ -46,7 +46,7 @@ console.log(str[str.length - 1]);
 // 和数组中的 join 相对应
 // 数组中的 join 是把数组的每一项按着指定的连接符为字符串
 
-// split是字把符串按照指定的分隔符，拆分成数组中的每一项
+// split 是字把符串按照指定的分隔符，拆分成数组中的每一项
 
 
 // replace
@@ -151,14 +151,14 @@ function suijishu() {
 }
 console.log(suijishu());
 
-function random(min,max) {
-    return min + Math.random() * (max-min);
+function random(min, max) {
+    return min + Math.random() * (max - min);
 }
-console.log(random(1,5));
-console.log(random(1,5));
-console.log(random(1,5));
+console.log(random(1, 5));
+console.log(random(1, 5));
+console.log(random(1, 5));
 
-function ucFirst(val){
-   return val[0].toUpperCase() + val.substr(1);
+function ucFirst(val) {
+    return val[0].toUpperCase() + val.substr(1);
 }
 console.log(ucFirst('aqeqwe'));

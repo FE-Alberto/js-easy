@@ -35,5 +35,15 @@ for (let i = 0; i < 10; i++) {
     console.log(Math.round(Math.random() * 10));
 }
 
+// Math.trunc(); //用于去除一个数的小数部分。 返回整数部分。
+console.log(Math.trunc(4.1));
+console.log(Math.trunc(4.9));
+console.log(Math.trunc(-4.1));
+console.log(Math.trunc(-4.2));
 
 
+// Math.sign() //用于判断一个数到底是正数 负数还是 零
+console.log(Math.sign(-5));
+console.log(Math.sign(5));
+console.log(Math.sign(0));
+console.log(Math.sign(NaN));

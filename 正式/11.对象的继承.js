@@ -77,9 +77,11 @@ console.log(mine, mine.length);
 function P() { };
 var p = new p();
 // p 是构造函数的大P的实例对象，但是p 自身没有 constructor 属性，该属性其实是读取原型链上面大 P.prototype.constructor 属性。
+function P() { };
+var p = new P();
+console.log(p.constructor === P);
+console.log(p.constructor === P.prototype.constructor);
 
-p.constructor === P;
-p.constructor === P.prototype.constructor;
 p.hasOwnProperty('constructor')
 
 // constructor 的属性的作用是，可以得知某个实例对象，到底是哪一个构造函函数产生的。
@@ -92,8 +94,8 @@ Fn.prototype.createCopy = function () {
 }
 
 var f = new Fn();
-f.constructor == Fn
-f.constructor === RegExp;
+console.log(f.constructor == Fn);
+console.log(f.constructor === RegExp);
 
 // 有了 constrouctor 属性，就可以从一个实例对象中新建另一个实例。
 
@@ -103,7 +105,7 @@ console.log(x.name);
 var z = x.createCopy()
 console.log(z.prototype);
 
-// constructor 属性表示原型对象余构造函数之间的关联关系，
+// constructor 属性表示原型对象与构造函数之间的关联关系，
 // 如果修改了原型对象，一般会同时修改 constructor 属性
 
 
@@ -153,8 +155,11 @@ function Shape() {
 Shape.prototype.move = function (x, y) {
     this.x += x;
     this.y += y;
-    console.info("Shape moved.");
+    console.info(this.x, this.y,"Shape moved.");
 }
+
+var res = new Shape();
+
 function Rectangle() {
     Shape.call(this);
 }

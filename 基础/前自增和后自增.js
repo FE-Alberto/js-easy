@@ -1,10 +1,10 @@
 
 var a = 1;
-var b = ++a + ++a; a = a +1 ;  // 2
-console.log(a); 
+var b = ++a + ++a; a = a + 1;  // 2
+console.log(a);
 console.log(b);
 
-var a = 1; 
+var a = 1;
 var b = ++a + a++;
 console.log(a); 3
 console.log(b); 4
@@ -15,14 +15,14 @@ console.log(b); 4
 // 前自增:算数运算符优先于赋值运算符，先执行++操作，再执行赋值操作
 
 
-var a = 1 ;
-var b = ++a ;// a = a+1, b =a 
+var a = 1;
+var b = ++a;// a = a+1, b =a 
 console.log(a);// 2
 console.log(b); //2
 //  后自增：赋值运算符优先于算数运算符，先执行赋值操作，再执行++操作
 
-var a =1;
-var b = a++ ;// b =a , a = a +1
+var a = 1;
+var b = a++;// b = a, a = a +1
 console.log(a);//2
 console.log(b);//1
 
@@ -35,19 +35,19 @@ console.log(var1);
 console.log(var2);
 
 // number 强制转换
-    Number();
-    parseInt();
+Number();
+parseInt();
 // String() 强制转换
 // 原始类型值
-console.log(String({a:1}));
- 
-console.log(String({a:1}.toString()));
+console.log(String({ a: 1 }));
+
+console.log(String({ a: 1 }.toString()));
 
 var obj = {
     valueOf: function () {
-        return {}       
+        return {}
     },
-    toString: function (){
+    toString: function () {
         return {}
     }
 }
@@ -72,6 +72,6 @@ Boolean();
 let num = 2;
 let n = num++
 let s = ++num;
-console.log(num);4
-console.log(n);2
-console.log(s);4
+console.log(num); 4
+console.log(n); 2
+console.log(s); 4

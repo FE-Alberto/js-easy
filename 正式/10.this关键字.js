@@ -28,7 +28,7 @@ var a = {
     p: 'Hello',
     b: {
         m: function () {
-            console.log(_this.p);
+            console.log(this.p);
         }
     }
 };

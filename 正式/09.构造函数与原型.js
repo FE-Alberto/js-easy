@@ -59,7 +59,7 @@ var Vehicle = function () {
     };
 }
 var v = new Vehicle();
-console.log(v);
+console.log(v.price);
 
 // new.target 函数内部可以使用 new.target 属性。
 // 如果当前函数是 new 命令调用 new.target 指向当前函数，否则为 undefined；

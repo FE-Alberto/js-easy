@@ -8,7 +8,7 @@ console.log(a);
 let a = 10,
     b = 12;
 let fn = function () {
-    let a = b = 20
+    let a = b = 20;
     console.log(a, b);
 };
 fn();

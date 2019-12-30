@@ -104,7 +104,23 @@ Array.prototype.myUnique = function myUnique() {
 }
 ary.myUnique()// this.ary;
 console.log(ary); 
+var res = n.plus(3).minus(2); // 6
+console.log(res);
+
 
 var n = 5;
-var res = n.plus(3).minus(2); // 6
+Number.prototype.plus = function plus() {
+    console.log(this,arguments);
+    if(typeof arguments[0] == 'number'){
+        return this+arguments[0]
+    }
+    return console.log('参数不是数字');
+}
+Number.prototype.minus = function minus() {
+    if(typeof arguments[0] == 'number'){
+        return this-arguments[0]
+    }
+    return console.log('参数不是数字');
+}
+var res = n.plus(5).minus(3);
 console.log(res);
