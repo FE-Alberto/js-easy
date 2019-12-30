@@ -148,11 +148,11 @@ function fn() {
 }
 
 fn.prototype = {
-    b:function () {
+    b: function () {
         this.a = 20;
         alert(this.a)
     },
-    c:function () {
+    c: function () {
         this.a = 30;
         alert(this.a)
     }
@@ -172,14 +172,14 @@ function Fn() {
         console.log(this.m);
     }
 }
-var f1= new Fn;
-Fn.prototype.bb = function() {
+var f1 = new Fn;
+Fn.prototype.bb = function () {
     console.log(this.n);
     var f1 = new Fn;
     Fn.prototype = {
-        aa:function() {
-            console.log(this.m+10);
-            
+        aa: function () {
+            console.log(this.m + 10);
+
         }
     }
 }
@@ -192,3 +192,42 @@ f1.aa() // 20
 f2.bb() // undefined
 f2.aa() // 20
 f2.__proto__.aa(); // NaN
+
+// 函数也是对象
+// 函数有三中角色
+
+// 1.普通角色
+// 堆栈内存释放
+// 作用域链
+// 2.类
+// prototype 原型
+// __proto__ 原型链
+// 实例
+// 3.普通对象
+// 就是堆键值对的增删改查
+
+function Foo() {
+    getName = function () {
+        console.log(1);
+    }
+    return this;
+}
+Foo.getName = function () {
+    console.log(2);
+}
+Foo.prototype.getName = function () {
+    console.log(3);
+}
+var getName = function () {
+    console.log(4);
+}
+
+function getName() {
+    console.log(5);
+}
+
+Foo.getName(); // 2 把Foo当做一个对象，找Foo的私有方法
+getName(); // 4 变量提升重新赋值
+Foo().getName(); 
+getName();
+new Foo()
