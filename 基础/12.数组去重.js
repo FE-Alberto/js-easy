@@ -124,3 +124,13 @@ Number.prototype.minus = function minus() {
 }
 var res = n.plus(5).minus(3);
 console.log(res);
+
+
+// 数组降维
+let arr = [[1,3,45],[55,66,44],11,[213,4213]];
+arr += '';
+console.log(arr);
+arr = arr.split(',');
+arr = arr.map(item => Number(item))
+console.log(arr);
+
