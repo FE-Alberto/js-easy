@@ -121,15 +121,34 @@ console.dir(Array.prototype);
 
 
 // 数组中高级方法
-ary.every()
+
+// 数组是否包含某一个数组
+ary.includes()
+
 ary.filter()
 ary.find()
 ary.findIndex()
-ary.includes()
+// forEach与map 方法佷相似，也是对数组的所有成员一次执行参数函数。
+// 但是没有返回值，只用来操作数据，
+// 如果数组遍历的目的是为了得到返回值，那么使用map 否则使用forEach
 ary.forEach()
+var out = [];
+[1,2,3].forEach(function(elem) {
+    this.push(elem * elem);
+},out);
+console.log(out); // [1,4,9]
+
 ary.keys()
+
+// map方法将数组的所有值一次传入参数函数，
+// 然后把每一次的执行结果 组成恒毅新的数组
 ary.map()
+[1,2,3].map(function (elem,index,arr) {
+    return elem * index;
+})
+// 依次从左到右处理 
 ary.reduce()
+// 依次从右到左处理
 ary.reduceRight()
 ary.some();
 
