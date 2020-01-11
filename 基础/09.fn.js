@@ -43,7 +43,7 @@ ask(
 )
 
 // 箭头函数
-
+// this 指向不会改变
 // 如果参数大于1 需要加圆括号
 let sum = (a, b) => a + b;
 console.log(sum(1, 23));

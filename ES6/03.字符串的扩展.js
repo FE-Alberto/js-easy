@@ -13,7 +13,22 @@
 // repeat() 返回一个新字符串，表示原字符串重复N次。
 
 
+const text = 'hello'
+console.log(text.length);
+console.log(/^.$/.test(text));
+console.log(text.charAt(0));
+console.log(text.charAt(1));
+console.log(text.charCodeAt(0));
+console.log(text.charCodeAt(1));
 
 
 
 
+var msg = "Hello world!";
+console.log(msg.includes('o', 1));
+
+
+var indent = " ".repeat(4),
+    indentLevel = 0;
+var newIndent = indent.repeat(++indentLevel);
+console.log(newIndent);

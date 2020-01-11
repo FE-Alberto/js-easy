@@ -3,7 +3,7 @@
 // math 的常用方法
 
 // abs 绝对值
-console.log(Math.abs(-10));
+console.log(Math.abs(-10.1231));
 
 // ceil 向上取整
 console.log(Math.ceil(10.2));

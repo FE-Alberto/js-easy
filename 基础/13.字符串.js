@@ -13,7 +13,7 @@ console.log(str[str.length - 1]);
 // 操作的，所以不存在原有字符串是否改变这一说，肯定都是不变的
 
 // charAt/charCodeAt
-// 作用：charAt根据索引获取指定位置的字符，
+// 作用：charAt 根据索引获取指定位置的字符，
 // charCodeAt不仅获取字符，它获取的是字符对应的 Unicode 编码值 ASCII 码值
 
 // 参数：索引
@@ -79,6 +79,9 @@ var ary = str.split(' '),
     aryLeft = ary[0].split('-'),
     aryRight = ary[1].split(':');
 console.log(aryLeft, aryRight);
+
+var str = "bear klsdjklsdfio2q3123123120".split(' ').pop();
+console.log(str);
 
 var month = addZero(aryLeft[1]),
     day = addZero(aryLeft[2]),

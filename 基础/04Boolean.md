@@ -4,7 +4,7 @@
 - Boolean 
 - ！取反
 - !! 取正
-## 在js中只有 '' 0 NAN null undefined 这五个转化为布尔类型的false 其他都为 true
+## 在 js 中只有 '' 0 NAN null undefined 这五个转化为布尔类型的 false 其他都为 true
 
 - Null && undefiend
 - null 本意是 空对象对象指针

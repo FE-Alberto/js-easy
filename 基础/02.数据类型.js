@@ -26,7 +26,7 @@ console.log(age);
 
 // undefined 值
 // undefined 的 含义是未被赋值。
-// 如果一个鼻哪里被声明，但未被复制，那么它的值就是 undefined
+// 如果一个哪里被声明，但未被复制，那么它的值就是 undefined
 
 let x;
 console.log(x);

@@ -2,7 +2,7 @@
 // 有了 Promise 对象，就可以将异步操作以同步操作的流程表达出了
 // 避免了层层嵌套的回调函数。
 
-// Promise 对象是一个构造函数，用来生成 Promise实例。
+// Promise 对象是一个构造函数，用来生成 Promise 实例。
 
 
 // 基本用法
@@ -19,8 +19,8 @@ promise.then(function (value) {
 }, function (value) {
 
 })
-// Promise构造函数接受一个函数作为参数，该函数的两个参数分别是resolve方法和reject方法。如果异步操作成功，则用resolve方法将Promise对象的状态变为“成功”（即从pending变为resolved）；如果异步操作失败，则用reject方法将状态变为“失败”（即从pending变为rejected）。
-// promise 实例生成之后，可以用 then 方法分别指定 resolve方法和reject方法回调函数。
+// Promise构造函数接受一个函数作为参数，该函数的两个参数分别是resolve方法和 reject 方法。如果异步操作成功，则用resolve方法将Promise对象的状态变为“成功”（即从 pending 变为 resolved ）；如果异步操作失败，则用 reject 方法将状态变为“失败”（即从 pending 变为rejected）。
+// promise 实例生成之后，可以用 then 方法分别指定 resolve 方法和reject方法回调函数。
 
 function timeout(ms) {
     return new Promise((resolve) => {

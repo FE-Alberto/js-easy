@@ -103,22 +103,22 @@ Array.prototype.myUnique = function myUnique() {
     return this;
 }
 ary.myUnique()// this.ary;
-console.log(ary); 
+console.log(ary);
 var res = n.plus(3).minus(2); // 6
 console.log(res);
 
 
 var n = 5;
 Number.prototype.plus = function plus() {
-    console.log(this,arguments);
-    if(typeof arguments[0] == 'number'){
-        return this+arguments[0]
+    console.log(this, arguments);
+    if (typeof arguments[0] == 'number') {
+        return this + arguments[0]
     }
     return console.log('参数不是数字');
 }
 Number.prototype.minus = function minus() {
-    if(typeof arguments[0] == 'number'){
-        return this-arguments[0]
+    if (typeof arguments[0] == 'number') {
+        return this - arguments[0]
     }
     return console.log('参数不是数字');
 }
@@ -127,10 +127,23 @@ console.log(res);
 
 
 // 数组降维
-let arr = [[1,3,45],[55,66,44],11,[213,4213]];
+let arr = [[1, 3, 45], [55, 66, 44], 11, [213, 4213]];
 arr += '';
 console.log(arr);
 arr = arr.split(',');
 arr = arr.map(item => Number(item))
 console.log(arr);
 
+let arr = [43, 123, 3, 2, 13, 3, 2, 1, 3, 3, 3, 3, 3]
+let obj = {}
+for (let i = 0; i < arr.length; i++) {
+    let item = arr[i];
+    if (typeof obj[item] !== 'undefined') {
+        item = arr[arr.length - 1];
+        arr.length--;
+        i--;
+        continue;
+    }
+    obj[item] = item;
+}
+console.log(obj);

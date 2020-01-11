@@ -20,4 +20,54 @@ console.log(person.name);
 person = {
     name:"greg"
 }
+// 暂时性死区
+if(true){
+    console.log(typeof value);
+    let value = 'blue'
+}
+
+for (var i = 0; i < 10; i++) {
+    process(item[i])
+}
+console.log(i);
+
+
+var funcs = [];
+for (var i = 0; i < 10; i++) {
+    funcs.push(function() {
+        console.log(i);
+    })
+}
+funcs.forEach(function (func) {
+    func();
+})
+
+var funcs = [];
+for (let i = 0; i < 10; i++) {
+    funcs.push((function(value){
+        return function(){
+            console.log(value);
+        }
+    }(i)));
+}
+funcs.forEach(function(func){
+    func();
+})
+
+var func = [];
+for (const i = 0; i < 10; i++) {
+    func.push(function(){
+        console.log(i);
+    })
+}
+
+let RegExp = 'hello!';
+console.log(RegExp);
+console.log(window.RegExp === RegExp);
+
+const ncz = 'hi!';
+console.log(ncz);
+console.log('ncz' in window);
+
+
 

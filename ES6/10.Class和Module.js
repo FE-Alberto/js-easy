@@ -7,7 +7,7 @@ function Ponit(x, y) {
 Ponit.prototype.toString = function () {
     return '(' + this.x + ',' + this.y + ')'
 }
-// ES6引入Class 类的概念。作为对象的模板。
+// ES6 引入 Class 类的概念。作为对象的模板。
 // 通过class关键字，可以定义类。
 
 class Ponit {
@@ -63,7 +63,7 @@ export { firstName, lastName, year }
 import { lastName as UserName } from './profile';
 
 
-// 模块整体输入，module命令
+// 模块整体输入，module 命令
 // export 命令除了输出变量，还可以输出方法或者Class。
 export function area(radius) {
     return Math.PI * radius * radius;
